@@ -17,3 +17,31 @@ void print_bitarray(bitarray array){
 		printf("%i", bit_value(array, i));
 	}
 }
+void print_hexadecimal(bitarray array){
+	for(int i = 1; i >= 0; i--){
+		if(((array>>i*4) & 15) > 9){
+			switch((array>>i*4) & 15){
+				case 10:
+					printf("A");
+					break;
+				case 11:
+					printf("B");
+					break;
+				case 12:
+					printf("C");
+					break;
+				case 13:
+					printf("D");
+					break;
+				case 14:
+					printf("E");
+					break;
+				case 15:
+					printf("F");
+					break;
+			}
+		}else{
+			printf("%d", (array>>i*4) & 15);
+		}
+	}
+}
