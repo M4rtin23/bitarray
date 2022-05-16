@@ -1,6 +1,6 @@
 all: bitarray.so
 
-bitarray.so:
+bitarray.so: bitarray.c
 	gcc -shared bitarray.c -o bitarray.so
 
 install: bitarray.so
