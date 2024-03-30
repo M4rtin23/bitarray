@@ -45,3 +45,9 @@ void print_hexadecimal(bitarray array){
 		}
 	}
 }
+
+void to_array(bitarray bitarray, char* array){
+	for(int i = 0; i < 8; i++){
+		array[i] = bit_value(bitarray, i);
+	}
+}
